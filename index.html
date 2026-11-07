@@ -1,390 +1,419 @@
-
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
-    <meta name="description" content="Christoph Dann, Research Scientist">
-    <meta name="author" content="Christoph Dann">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Christoph Dann, Research Scientist at Google Research working on reinforcement learning, preference-based alignment, bandits, and statistical machine learning.">
+  <meta name="author" content="Christoph Dann">
+  <link rel="canonical" href="https://cdann.net/">
 
-    <link rel="shortcut icon" href="img/favicon.ico">
-	<link rel="icon" sizes="16x16 32x32 64x64" href="img/favicon.ico">
-	<link rel="icon" type="image/png" sizes="196x196" href="img/favicon-192.png">
-	<link rel="icon" type="image/png" sizes="160x160" href="img/favicon-160.png">
-	<link rel="icon" type="image/png" sizes="96x96" href="img/favicon-96.png">
-	<link rel="icon" type="image/png" sizes="64x64" href="img/favicon-64.png">
-	<link rel="icon" type="image/png" sizes="32x32" href="img/favicon-32.png">
-	<link rel="icon" type="image/png" sizes="16x16" href="img/favicon-16.png">
-	<link rel="apple-touch-icon" href="img/favicon-57.png">
-	<link rel="apple-touch-icon" sizes="114x114" href="img/favicon-114.png">
-	<link rel="apple-touch-icon" sizes="72x72" href="img/favicon-72.png">
-	<link rel="apple-touch-icon" sizes="144x144" href="img/favicon-144.png">
-	<link rel="apple-touch-icon" sizes="60x60" href="img/favicon-60.png">
-	<link rel="apple-touch-icon" sizes="120x120" href="img/favicon-120.png">
-	<link rel="apple-touch-icon" sizes="76x76" href="img/favicon-76.png">
-	<link rel="apple-touch-icon" sizes="152x152" href="img/favicon-152.png">
-	<link rel="apple-touch-icon" sizes="180x180" href="img/favicon-180.png">
-    <title>Christoph Dann</title>
+  <!-- Open Graph / Social Preview -->
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://cdann.net/">
+  <meta property="og:title" content="Christoph Dann">
+  <meta property="og:description" content="Research Scientist at Google Research working on reinforcement learning, preference-based alignment, bandits, and statistical machine learning.">
+  <meta property="og:image" content="https://cdann.net/img/cdann2017_350px.jpg">
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="Christoph Dann">
+  <meta name="twitter:description" content="Research Scientist at Google Research working on reinforcement learning, preference-based alignment, bandits, and statistical machine learning.">
+  <meta name="twitter:image" content="https://cdann.net/img/cdann2017_350px.jpg">
 
-    <!-- Bootstrap core CSS -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
-		<!-- Global site tag (gtag.js) - Google Analytics -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=UA-32978747-1"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
+  <link rel="shortcut icon" href="img/favicon.ico">
+  <link rel="icon" sizes="16x16 32x32 64x64" href="img/favicon.ico">
+  <link rel="icon" type="image/png" sizes="196x196" href="img/favicon-192.png">
+  <link rel="icon" type="image/png" sizes="160x160" href="img/favicon-160.png">
+  <link rel="icon" type="image/png" sizes="96x96" href="img/favicon-96.png">
+  <link rel="icon" type="image/png" sizes="64x64" href="img/favicon-64.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="img/favicon-32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="img/favicon-16.png">
+  <link rel="apple-touch-icon" href="img/favicon-57.png">
+  <link rel="apple-touch-icon" sizes="114x114" href="img/favicon-114.png">
+  <link rel="apple-touch-icon" href="img/favicon-72.png">
+  <link rel="apple-touch-icon" sizes="144x144" href="img/favicon-144.png">
+  <link rel="apple-touch-icon" sizes="60x60" href="img/favicon-60.png">
+  <link rel="apple-touch-icon" sizes="120x120" href="img/favicon-120.png">
+  <link rel="apple-touch-icon" sizes="76x76" href="img/favicon-76.png">
+  <link rel="apple-touch-icon" sizes="152x152" href="img/favicon-152.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="img/favicon-180.png">
 
-  gtag('config', 'UA-32978747-1');
-</script>
+  <title>Christoph Dann</title>
+
+  <!-- Bootstrap 5.3 CSS & JS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous" defer></script>
+  <style>
+    a.badge {
+      text-decoration: none;
+    }
+  </style>
 </head>
 <body>
 <div class="container p-2" id="home">
-	<div class="row ">
-		<div class="col-md-8 p-4">
+  <div class="row">
+    <div class="col-md-8 p-4">
       <h1>Christoph Dann</h1>
-      <p>Welcome! I am a Research Scientist at Google Research in Zurich.
-					My research focuses on fundamental questions in reinforcement learning.
-					Before, I obtained my PhD in the <a href="http://ml.cmu.edu">Machine Learning Department</a> at
-        Carnegie Mellon University, where I was advised by <a href="http://www.cs.stanford.edu/people/ebrun/">Emma Brunskill</a>.</p>
-	    <ul>
+      <p>Welcome! I am a Research Scientist at Google Research in Germany.
+        My research focuses on fundamental questions in reinforcement learning and statistical machine learning, including preference-based model alignment, bandits, and game-theoretic decision making.
+        Before, I obtained my PhD in the <a href="https://www.ml.cmu.edu/">Machine Learning Department</a> at
+        Carnegie Mellon University, where I was advised by <a href="https://cs.stanford.edu/people/ebrun/">Emma Brunskill</a>.</p>
+      <ul>
         <li>Email: <a href="mailto:cdann@cdann.net">cdann@cdann.net</a></li>
-        <li>Github: <a href="https://github.com/chrodan">chrodan</a></li>
-        <li><a href="https://www.linkedin.com/in/christophdann">Linkedin</a></li>
+        <li>GitHub: <a href="https://github.com/chrodan">chrodan</a></li>
+        <li><a href="https://www.linkedin.com/in/christophdann">LinkedIn</a></li>
         <li><a href="https://scholar.google.com/citations?user=FuGllAwAAAAJ">Google Scholar</a></li>
-        <li><a href="pub/cv_eng.pdf">Curriculum Vitae</a></li>
+        <!-- <li><a href="pub/cv_eng.pdf">Curriculum Vitae</a></li> -->
       </ul>
     </div>
-		<div class="col-md-4 p-4">
-			<img src="img/cdann2017_350px.jpg" alt="Christoph 2017" class="img-thumbnail"/>
-		</div>
-	</div>
-</div>
-
-<div class="container p-2" id="news">
-<h1>News</h1>
-    <ul>
-<li><b>April 2022:</b> Our paper <i>A Model Selection Approach for Corruption Robust Reinforcement Learning</i> won the best paper award at ALT 2022.</li>
-<li><b>October 2019:</b> I am excited to join Google Research as a Research Scientist!</li>
-<li><b>September 2019:</b> After 5 fabulous years in the machine learning department at CMU, I successfully defended my PhD at CMU.</li>
-<li><b>Summer 2018:</b> I am interning at Google Cloud AI Research, working with Lihong Li and Wei Wei.</li>
-<li><b>December 2017:</b> I was excited to present our work on uniform PAC, a new learning framework that combines the advantages of the existing PAC and regret frameworks, as a spotlight and poster at NeurIPS.
-I also got a <a href="https://nips.cc/Conferences/2017/Awards">best reviewer award</a> at NeurIPS17.</li>
-	<li><b>September 2017:</b> Together with my teammates <a href="http://www.cs.cmu.edu/~mktoneva/">Mariya Toneva</a>, Feier Li and Daniel Dong, I participated in the Citadel Datathon at CMU winning a runner-up cash prize of $2500.</li>
-	<li><b>September 2017:</b> I interned this summer at Microsoft Research New York working with Nan Jian, Akshay Krishnamurthy, Alekh Agarwal, John Langford and Robert Shapire.</li>
-        <li><b>September 2016:</b> I worked this summer with Sebastian Nowozin and Katja Hofmann at Microsoft Resarch Cambridge, UK, on quantifying and estimating the amount of information reinforcement learning agents use from previous observations when they take action in non-Markovian environments.</li>
-        <li><b>November 2015:</b> I received the <a href="http://www.tu-darmstadt.de/studieren/aktuelles/ausgezeichnet/preisdetails_34112.de.jsp">Datenlotsenpreis 2015</a> for my master's thesis, an award for outstanding bachelor's and master's theses at TU Darmstadt in the area of Mathematics, Computer Science and Engineering (some info in German <a href="http://www.tu-darmstadt.de/vorbeischauen/aktuell/einzelansicht_134464.de.jsp">here</a> and <a href="http://www.echo-online.de/lokales/darmstadt/nachwuchspreise-2015-fuer-abschlussarbeiten-an-der-tu-darmstadt-werden-vergeben_16390595.htm">here</a>)</li>
-    </ul>
+    <div class="col-md-4 p-4">
+      <img src="img/cdann2017_350px.jpg" alt="Christoph Dann" class="img-thumbnail">
+    </div>
+  </div>
 </div>
 
 <div class="container p-2" id="publications">
-	<h1>Publications and Preprints</h1>
-	<ul class="list-group p-2">
-		<li class="list-group-item">
-			<b>Conditioned Language Policy: A General Framework for Steerable Multi-Objective Finetuning</b><br>
-			Kaiwen Wang, Rahul Kidambi, Ryan Sullivan, Alekh Agarwal, Christoph Dann, Andrea Michi, 
-			Marco Gelmi, Yunxuan Li, Raghav Gupta, Avinava Dubey, Alexandre Ramé, Johan Ferret, Geoffrey Cideron, 
-			Le Hou, Hongkun Yu, Amr Ahmed, Aranyak Mehta, Léonard Hussenot, Olivier Bachem, Edouard Leurent<br>
-			<a href="https://arxiv.org/abs/2407.15762">[Arxiv]</a>
-		</li>
-		<li class="list-group-item">
-			<b>Rate-Preserving Reductions for Blackwell Approachability</b><br>
-			Christoph Dann, Yishay Mansour, Mehryar Mohri, Jon Schneider, Balasubramanian Sivan<br>
-			<a href="https://arxiv.org/abs/2406.07585">[Arxiv]</a>
-		</li>
-		<li class="list-group-item">
-			<b>A Minimaximalist Approach to Reinforcement Learning from Human Feedback</b><br>
-			Gokul Swamy, Christoph Dann, Rahul Kidambi, Zhiwei Steven Wu, Alekh Agarwal<br>
-			<a href="https://icml.cc/Conferences/2024/" class="badge bg-secondary">ICML '24</a>
-			<a href="https://arxiv.org/abs/2401.04056">[Arxiv]</a>
-		</li>
-		<li class="list-group-item">
-    			<b>Data-Driven Online Model Selection With Regret Guarantees</b><br>
-      			Aldo Pacchiano, Christoph Dann, Claudio Gentile<br>
-			<a href="http://aistats.org/aistats2023" class="badge bg-secondary">AISTATS '24</a>
-		 	<a href="https://arxiv.org/abs/2306.02869">[Arxiv]</a>
-   		 </li>
-		<li class="list-group-item">
-			<b>A Blackbox Approach to Best of Both Worlds in Bandits and Beyond</b><br>
-			Christoph Dann, Chen-Yu Wei, Julian Zimmert<br>
-			<a href="https://learningtheory.org/colt2023/" class="badge bg-secondary">COLT '23</a>
-			<a href="https://arxiv.org/abs/2302.09739">[Arxiv]</a>
-		</li>
-		<li class="list-group-item">
-			<b>Learning in POMDPs is Sample-Efficient with Hindsight Observability</b><br>
-			Jonathan N. Lee, Alekh Agarwal, Christoph Dann, Tong Zhang<br>
-			<a href="https://icml.cc/Conferences/2023/" class="badge bg-secondary">ICML '23</a>
-			<a href="https://arxiv.org/abs/2301.13857">[Arxiv]</a>
-		</li>
-		<li class="list-group-item">
-			<b>Reinforcement Learning Can Be More Efficient with Multiple Rewards</b><br>
-			Christoph Dann, Yishay Mansour, Mehryar Mohri<br>
-			<a href="https://icml.cc/Conferences/2023/" class="badge bg-secondary">ICML '23</a>
-			[pdf soon]
-		</li>
-		<li class="list-group-item">
-			<b>Best of Both Worlds Policy Optimization</b><br>
-			Christoph Dann, Chen-Yu Wei, Julian Zimmert<br>
-			<a href="https://icml.cc/Conferences/2023/" class="badge bg-secondary">ICML '23</a>
-			<mark>short live talk</mark>
-			<a href="https://arxiv.org/abs/2302.09408">[Arxiv]</a>
-		</li>
-		<li class="list-group-item">
-			<b>Multiple-policy High-confidence Policy Evaluation</b><br>
-			Christoph Dann, Mohammad Ghavamzadeh, Teodor V. Marinov<br>
-			<a href="http://aistats.org/aistats2023" class="badge bg-secondary">AISTATS '23</a>
-			<a href="https://proceedings.mlr.press/v206/dann23a.html">[pdf]</a>
-		</li>
-		<li class="list-group-item">
-			<b>Pseudonorm Approachability and Applications to Regret Minimization</b><br>
-			Christoph Dann, Yishay Mansour, Mehryar Mohri, Jon Schneider, Balasubramanian Sivan<br>
-			<a href="http://algorithmiclearningtheory.org/alt2023/" class="badge bg-secondary">ALT '23</a>
-			<a href="https://arxiv.org/abs/2302.01517">[Arxiv]</a>
-		</li>
-		<li class="list-group-item">
-    	<b>A Unified Algorithm for Stochastic Path Problems</b><br>
-      Christoph Dann, Chen-Yu Wei, Julian Zimmert<br>
-			<a href="http://algorithmiclearningtheory.org/alt2023/" class="badge bg-secondary">ALT '23</a>
-		 	<a href="https://arxiv.org/abs/2210.09255">[Arxiv]</a>
+  <h1>Publications and Preprints</h1>
+  <ul class="list-group p-2">
+    <li class="list-group-item">
+      <b>Theoretical Foundations and Effective Algorithms for Policy-Aware Simulator Learning</b><br>
+      Christoph Dann, Yishay Mansour, Mehryar Mohri<br>
+      <a href="https://arxiv.org/abs/2605.29032">[Arxiv]</a>
     </li>
-		<li class="list-group-item">
-    	<b>Best of Both Worlds Model Selection</b><br>
+    <li class="list-group-item">
+      <b>Principled Model Routing for Unknown Mixtures of Source Domains</b><br>
+      Christoph Dann, Yishay Mansour, Teodor V. Marinov, Mehryar Mohri<br>
+      <a href="https://neurips.cc/Conferences/2025" class="badge bg-secondary">NeurIPS '25</a>
+      <a href="https://openreview.net/forum?id=tB6mX2Sfxk">[OpenReview]</a>
+      <a href="https://neurips.cc/virtual/2025/loc/san-diego/poster/115353">[Poster]</a>
+    </li>
+    <li class="list-group-item">
+      <b>Mitigating Preference Hacking in Policy Optimization with Pessimism</b><br>
+      Dhawal Gupta, Adam Fisch, Christoph Dann, Alekh Agarwal<br>
+      <a href="https://arxiv.org/abs/2503.06810">[Arxiv]</a>
+    </li>
+    <li class="list-group-item">
+      <b>Can RLHF be More Efficient with Imperfect Reward Models? A Policy Coverage Perspective</b><br>
+      Jiawei Huang, Bingcong Li, Christoph Dann, Niao He<br>
+      <a href="https://icml.cc/Conferences/2025" class="badge bg-secondary">ICML '25</a>
+      <a href="https://proceedings.mlr.press/v267/huang25o.html">[pdf]</a>
+      <a href="https://arxiv.org/abs/2502.19255">[Arxiv]</a>
+    </li>
+    <li class="list-group-item">
+      <b>Design Considerations in Offline Preference-based RL</b><br>
+      Alekh Agarwal, Christoph Dann, Teodor V. Marinov<br>
+      <a href="https://icml.cc/Conferences/2025" class="badge bg-secondary">ICML '25</a>
+      <a href="https://proceedings.mlr.press/v267/agarwal25a.html">[pdf]</a>
+      <a href="https://arxiv.org/abs/2502.06861">[Arxiv]</a>
+    </li>
+    <li class="list-group-item">
+      <b>Rate-Preserving Reductions for Blackwell Approachability</b><br>
+      Christoph Dann, Yishay Mansour, Mehryar Mohri, Jon Schneider, Balasubramanian Sivan<br>
+      <a href="https://learningtheory.org/colt2025/" class="badge bg-secondary">COLT '25</a>
+      <a href="https://proceedings.mlr.press/v291/dann25a.html">[pdf]</a>
+      <a href="https://arxiv.org/abs/2406.07585">[Arxiv]</a>
+    </li>
+    <li class="list-group-item">
+      <b>Preserving Expert-Level Privacy in Offline Reinforcement Learning</b><br>
+      Navodita Sharma, Vishnu Vinod, Abhradeep Thakurta, Alekh Agarwal, Borja Balle, Christoph Dann, Aravindan Raghuveer<br>
+      <a href="https://jmlr.org/tmlr/" class="badge bg-secondary">TMLR '25</a>
+      <mark>J2C certification</mark>
+      <a href="https://arxiv.org/abs/2411.13598">[Arxiv]</a>
+      <div class="p-2">Also presented in the Journal-to-Conference Track at <a href="https://icml.cc/Conferences/2026">ICML '26</a></div>
+    </li>
+    <li class="list-group-item">
+      <b>Conditional Language Policy: A General Framework for Steerable Multi-Objective Finetuning</b><br>
+      Kaiwen Wang, Rahul Kidambi, Ryan Sullivan, Alekh Agarwal, Christoph Dann, Andrea Michi,
+      Marco Gelmi, Yunxuan Li, Raghav Gupta, Avinava Dubey, Alexandre Ramé, Johan Ferret, Geoffrey Cideron,
+      Le Hou, Hongkun Yu, Amr Ahmed, Aranyak Mehta, Léonard Hussenot, Olivier Bachem, Edouard Leurent<br>
+      <a href="https://2024.emnlp.org/" class="badge bg-secondary">Findings of EMNLP '24</a>
+      <a href="https://aclanthology.org/2024.findings-emnlp.118/">[pdf]</a>
+      <a href="https://arxiv.org/abs/2407.15762">[Arxiv]</a>
+    </li>
+    <li class="list-group-item">
+      <b>A Minimaximalist Approach to Reinforcement Learning from Human Feedback</b><br>
+      Gokul Swamy, Christoph Dann, Rahul Kidambi, Zhiwei Steven Wu, Alekh Agarwal<br>
+      <a href="https://icml.cc/Conferences/2024/" class="badge bg-secondary">ICML '24</a>
+      <a href="https://proceedings.mlr.press/v235/swamy24a.html">[pdf]</a>
+      <a href="https://arxiv.org/abs/2401.04056">[Arxiv]</a>
+    </li>
+    <li class="list-group-item">
+      <b>Data-Driven Online Model Selection With Regret Guarantees</b><br>
       Aldo Pacchiano, Christoph Dann, Claudio Gentile<br>
-			<a href="https://neurips.cc/Conferences/2022" class="badge bg-secondary">NeurIPS '22</a>
-		 	<a href="https://arxiv.org/abs/2206.14912">[Arxiv]</a>
+      <a href="https://aistats.org/aistats2024/" class="badge bg-secondary">AISTATS '24</a>
+      <a href="https://arxiv.org/abs/2306.02869">[Arxiv]</a>
     </li>
-		<li class="list-group-item">
-    	<b>Guarantees for Epsilon-Greedy Reinforcement Learning with Function Approximation</b><br>
+    <li class="list-group-item">
+      <b>A Blackbox Approach to Best of Both Worlds in Bandits and Beyond</b><br>
+      Christoph Dann, Chen-Yu Wei, Julian Zimmert<br>
+      <a href="https://learningtheory.org/colt2023/" class="badge bg-secondary">COLT '23</a>
+      <a href="https://arxiv.org/abs/2302.09739">[Arxiv]</a>
+    </li>
+    <li class="list-group-item">
+      <b>Learning in POMDPs is Sample-Efficient with Hindsight Observability</b><br>
+      Jonathan N. Lee, Alekh Agarwal, Christoph Dann, Tong Zhang<br>
+      <a href="https://icml.cc/Conferences/2023/" class="badge bg-secondary">ICML '23</a>
+      <a href="https://arxiv.org/abs/2301.13857">[Arxiv]</a>
+    </li>
+    <li class="list-group-item">
+      <b>Reinforcement Learning Can Be More Efficient with Multiple Rewards</b><br>
+      Christoph Dann, Yishay Mansour, Mehryar Mohri<br>
+      <a href="https://icml.cc/Conferences/2023/" class="badge bg-secondary">ICML '23</a>
+      <a href="https://proceedings.mlr.press/v202/dann23a.html">[pdf]</a>
+    </li>
+    <li class="list-group-item">
+      <b>Best of Both Worlds Policy Optimization</b><br>
+      Christoph Dann, Chen-Yu Wei, Julian Zimmert<br>
+      <a href="https://icml.cc/Conferences/2023/" class="badge bg-secondary">ICML '23</a>
+      <mark>short live talk</mark>
+      <a href="https://proceedings.mlr.press/v202/dann23b.html">[pdf]</a>
+      <a href="https://arxiv.org/abs/2302.09408">[Arxiv]</a>
+    </li>
+    <li class="list-group-item">
+      <b>Multiple-policy High-confidence Policy Evaluation</b><br>
+      Christoph Dann, Mohammad Ghavamzadeh, Teodor V. Marinov<br>
+      <a href="http://aistats.org/aistats2023" class="badge bg-secondary">AISTATS '23</a>
+      <a href="https://proceedings.mlr.press/v206/dann23a.html">[pdf]</a>
+    </li>
+    <li class="list-group-item">
+      <b>Pseudonorm Approachability and Applications to Regret Minimization</b><br>
+      Christoph Dann, Yishay Mansour, Mehryar Mohri, Jon Schneider, Balasubramanian Sivan<br>
+      <a href="https://algorithmiclearningtheory.org/alt2023/" class="badge bg-secondary">ALT '23</a>
+      <a href="https://arxiv.org/abs/2302.01517">[Arxiv]</a>
+    </li>
+    <li class="list-group-item">
+      <b>A Unified Algorithm for Stochastic Path Problems</b><br>
+      Christoph Dann, Chen-Yu Wei, Julian Zimmert<br>
+      <a href="https://algorithmiclearningtheory.org/alt2023/" class="badge bg-secondary">ALT '23</a>
+      <a href="https://arxiv.org/abs/2210.09255">[Arxiv]</a>
+    </li>
+    <li class="list-group-item">
+      <b>Best of Both Worlds Model Selection</b><br>
+      Aldo Pacchiano, Christoph Dann, Claudio Gentile<br>
+      <a href="https://neurips.cc/Conferences/2022" class="badge bg-secondary">NeurIPS '22</a>
+      <a href="https://arxiv.org/abs/2206.14912">[Arxiv]</a>
+    </li>
+    <li class="list-group-item">
+      <b>Guarantees for Epsilon-Greedy Reinforcement Learning with Function Approximation</b><br>
       Christoph Dann, Yishay Mansour, Mehryar Mohri, Ayush Sekhari, Karthik Sridharan<br>
-			<a href="https://icml.cc/Conferences/2022" class="badge bg-secondary">ICML '22</a>
-		 	<a href="https://arxiv.org/abs/2206.09421">[Arxiv]</a>
+      <a href="https://icml.cc/Conferences/2022" class="badge bg-secondary">ICML '22</a>
+      <a href="https://arxiv.org/abs/2206.09421">[Arxiv]</a>
     </li>
-				<li class="list-group-item">
-    	<b>A Model Selection Approach for Corruption Robust Reinforcement Learning</b><br>
+    <li class="list-group-item">
+      <b>A Model Selection Approach for Corruption Robust Reinforcement Learning</b><br>
       Chen-Yu Wei, Christoph Dann, Julian Zimmert<br>
-			<a href="http://algorithmiclearningtheory.org/alt2022/" class="badge bg-secondary">ALT '22</a>
-			<mark>best paper award</mark>
-		 	<a href="https://arxiv.org/abs/2110.03580">[Arxiv]</a>
+      <a href="https://algorithmiclearningtheory.org/alt2022/" class="badge bg-secondary">ALT '22</a>
+      <mark>best paper award</mark>
+      <a href="https://arxiv.org/abs/2110.03580">[Arxiv]</a>
     </li>
-						<li class="list-group-item">
-    	<b>Leveraging Initial Hints for Free in Stochastic Linear Bandits</b><br>
+    <li class="list-group-item">
+      <b>Leveraging Initial Hints for Free in Stochastic Linear Bandits</b><br>
       Richard Zhang, Abhimanyu Das, Ashok Cutkosky, Christoph Dann<br>
-			<a href="http://algorithmiclearningtheory.org/alt2022/" class="badge bg-secondary">ALT '22</a>
-		 	<a href="https://arxiv.org/abs/2203.04274">[Arxiv]</a>
+      <a href="https://algorithmiclearningtheory.org/alt2022/" class="badge bg-secondary">ALT '22</a>
+      <a href="https://arxiv.org/abs/2203.04274">[Arxiv]</a>
     </li>
-								<li class="list-group-item">
-    	<b>Same Cause; Different Effect in the Brain</b><br>
+    <li class="list-group-item">
+      <b>Same Cause; Different Effect in the Brain</b><br>
       Mariya Toneva, Jennifer Williams, Anand Bollu, Christoph Dann, Leila Wehbe<br>
-			<a href="https://www.cclear.cc/2022" class="badge bg-secondary">CLeaR '22</a>
-			<a href="https://arxiv.org/abs/2202.10376">[Arxiv]</a>
+      <a href="https://www.cclear.cc/2022" class="badge bg-secondary">CLeaR '22</a>
+      <a href="https://arxiv.org/abs/2202.10376">[Arxiv]</a>
     </li>
-		<li class="list-group-item">
-    	<b>Agnostic Reinforcement Learning with Low-Rank MDPs and Rich Observations</b><br>
+    <li class="list-group-item">
+      <b>Agnostic Reinforcement Learning with Low-Rank MDPs and Rich Observations</b><br>
       Christoph Dann, Yishay Mansour, Mehryar Mohri, Ayush Sekhari, Karthik Sridharan<br>
-			<a href="https://neurips.cc/Conferences/2021" class="badge bg-secondary">NeurIPS '21</a>
-		 	<mark>with spotlight talk</mark>
-		 	<a href="https://arxiv.org/abs/2106.11519">[Arxiv]</a>
+      <a href="https://neurips.cc/Conferences/2021" class="badge bg-secondary">NeurIPS '21</a>
+      <mark>with spotlight talk</mark>
+      <a href="https://arxiv.org/abs/2106.11519">[Arxiv]</a>
     </li>
-		<li class="list-group-item">
-			<b>Beyond Value-Function Gaps: Improved Instance-Dependent Regret Bounds for Episodic Reinforcement Learning</b><br>
-			Christoph Dann, Teodor V. Marinov, Mehryar Mohri, Julian Zimmert<br>
-			<a href="https://neurips.cc/Conferences/2021" class="badge bg-secondary">NeurIPS '21</a>
-			<mark>with spotlight talk</mark>
-			<a href="https://arxiv.org/abs/2107.01264">[Arxiv]</a>
-		</li>
-		<li class="list-group-item">
-			<b>A Provably Efficient Model-Free Posterior Sampling Method for Episodic Reinforcement Learning</b><br>
-			Christoph Dann, Mehryar Mohri, Tong Zhang, Julian Zimmert<br>
-			<a href="https://neurips.cc/Conferences/2021" class="badge bg-secondary">NeurIPS '21</a>
-			<a href="https://arxiv.org/abs/2208.10904">[Arxiv]</a>
-		</li>
-		<li class="list-group-item">
+    <li class="list-group-item">
+      <b>Beyond Value-Function Gaps: Improved Instance-Dependent Regret Bounds for Episodic Reinforcement Learning</b><br>
+      Christoph Dann, Teodor V. Marinov, Mehryar Mohri, Julian Zimmert<br>
+      <a href="https://neurips.cc/Conferences/2021" class="badge bg-secondary">NeurIPS '21</a>
+      <mark>with spotlight talk</mark>
+      <a href="https://arxiv.org/abs/2107.01264">[Arxiv]</a>
+    </li>
+    <li class="list-group-item">
+      <b>A Provably Efficient Model-Free Posterior Sampling Method for Episodic Reinforcement Learning</b><br>
+      Christoph Dann, Mehryar Mohri, Tong Zhang, Julian Zimmert<br>
+      <a href="https://neurips.cc/Conferences/2021" class="badge bg-secondary">NeurIPS '21</a>
+      <a href="https://arxiv.org/abs/2208.10904">[Arxiv]</a>
+    </li>
+    <li class="list-group-item">
       <b>Neural Active Learning with Performance Guarantees</b><br>
-			Pranjal Awasthi, Christoph Dann, Claudio Gentile, Ayush Sekhari, Zhilei Wang<br>
-			<a href="https://neurips.cc/Conferences/2021" class="badge bg-secondary">NeurIPS '21</a>
-			<a href="https://arxiv.org/abs/2106.03243">[Arxiv]</a>
+      Pranjal Awasthi, Christoph Dann, Claudio Gentile, Ayush Sekhari, Zhilei Wang<br>
+      <a href="https://neurips.cc/Conferences/2021" class="badge bg-secondary">NeurIPS '21</a>
+      <a href="https://arxiv.org/abs/2106.03243">[Arxiv]</a>
     </li>
-		<li class="list-group-item">
-      <b>Dynamic Balancing for Model Selection in Bandits and RL</b></br>
-			Ashok Cutkosky, Christoph Dann, Abhimanyu Das, Claudio Gentile, Aldo Pacchiano, Manish Purohit<br>
-			<a href="https://icml.cc/Conferences/2021" class="badge bg-secondary">ICML '21</a>
-			<a href="http://proceedings.mlr.press/v139/cutkosky21a.html">[pdf]</a><br>
+    <li class="list-group-item">
+      <b>Dynamic Balancing for Model Selection in Bandits and RL</b><br>
+      Ashok Cutkosky, Christoph Dann, Abhimanyu Das, Claudio Gentile, Aldo Pacchiano, Manish Purohit<br>
+      <a href="https://icml.cc/Conferences/2021" class="badge bg-secondary">ICML '21</a>
+      <a href="https://proceedings.mlr.press/v139/cutkosky21a.html">[pdf]</a><br>
       <div class="p-2">This paper is based on this earlier report:<br>
-			<b>Regret Bound Balancing and Elimination for Model Selection in Bandits and RL</b><br>
-			Aldo Pacchiano, Christoph Dann, Claudio Gentile, Peter Bartlett, 2020<br>
-			<a href="https://arxiv.org/abs/2012.13045">[Arxiv]</a></div>
-		</li>
-		<li class="list-group-item">
+        <b>Regret Bound Balancing and Elimination for Model Selection in Bandits and RL</b><br>
+        Aldo Pacchiano, Christoph Dann, Claudio Gentile, Peter Bartlett, 2020<br>
+        <a href="https://arxiv.org/abs/2012.13045">[Arxiv]</a>
+      </div>
+    </li>
+    <li class="list-group-item">
       <b>Reinforcement Learning with Feedback Graphs</b><br>
       Christoph Dann, Yishay Mansour, Mehryar Mohri, Ayush Sekhari, Karthik Sridharan<br>
-			<a href="https://neurips.cc/Conferences/2020" class="badge bg-secondary">NeurIPS '20</a>
-			<a href="https://proceedings.neurips.cc//paper_files/paper/2020/hash/c41dd99a69df04044aa4e33ece9c9249-Abstract.html">[pdf]</a>
-			<a href="https://arxiv.org/abs/2005.03789">[Arxiv]</a>
+      <a href="https://neurips.cc/Conferences/2020" class="badge bg-secondary">NeurIPS '20</a>
+      <a href="https://proceedings.neurips.cc/paper_files/paper/2020/hash/c41dd99a69df04044aa4e33ece9c9249-Abstract.html">[pdf]</a>
+      <a href="https://arxiv.org/abs/2005.03789">[Arxiv]</a>
     </li>
-		<li class="list-group-item">
-			<b>Scaling up behavioral science interventions in online education</b><br>
-			René F. Kizilcec, Justin Reich, Michael Yeomans, Christoph Dann, Emma Brunskill, Glenn Lopez, Selen Turkay, Joseph Jay Williams, Dustin Tingley<br>
-			<a href="https://doi.org/10.1073/pnas.1921417117" class="badge bg-secondary">PNAS '20</a>
-			<a href="https://www.pnas.org/content/pnas/117/26/14900.full.pdf">[pdf]</a>
-		</li>
-		<li class="list-group-item">
-			<b>Being Optimistic to Be Conservative: Quickly Learning a CVaR Policy</b><br>
-			Ramtin Keramati, Christoph Dann, Alex Tamkin, Emma Brunskill<br>
-			<a href="https://aaai.org/Conferences/AAAI-20/" class="badge bg-secondary">AAAI '20</a>
-			<a href="https://arxiv.org/abs/1911.01546">[Arxiv]</a>
-		</li>
+    <li class="list-group-item">
+      <b>Scaling up behavioral science interventions in online education</b><br>
+      René F. Kizilcec, Justin Reich, Michael Yeomans, Christoph Dann, Emma Brunskill, Glenn Lopez, Selen Turkay, Joseph Jay Williams, Dustin Tingley<br>
+      <a href="https://doi.org/10.1073/pnas.1921417117" class="badge bg-secondary">PNAS '20</a>
+      <a href="https://www.pnas.org/content/pnas/117/26/14900.full.pdf">[pdf]</a>
+    </li>
+    <li class="list-group-item">
+      <b>Being Optimistic to Be Conservative: Quickly Learning a CVaR Policy</b><br>
+      Ramtin Keramati, Christoph Dann, Alex Tamkin, Emma Brunskill<br>
+      <a href="https://aaai.org/Conferences/AAAI-20/" class="badge bg-secondary">AAAI '20</a>
+      <a href="https://arxiv.org/abs/1911.01546">[Arxiv]</a>
+    </li>
     <li class="list-group-item">
       <b>Policy Certificates: Towards Accountable Reinforcement Learning</b><br>
-			Christoph Dann, Lihong Li, Wei Wei, Emma Brunskill<br>
-			<a href="https://icml.cc/Conferences/2019" class="badge bg-secondary">ICML '19</a>
-			<a href="https://arxiv.org/abs/1811.03056">[Arxiv]</a>
-			<div class="p-2">Also presented at the <a href="https://sites.google.com/view/aiethicsworkshop">Workshop on Ethical, Social and Governance Issues in AI</a>
-				at NeurIPS 18
+      Christoph Dann, Lihong Li, Wei Wei, Emma Brunskill<br>
+      <a href="https://icml.cc/Conferences/2019" class="badge bg-secondary">ICML '19</a>
+      <a href="https://arxiv.org/abs/1811.03056">[Arxiv]</a>
+      <div class="p-2">Also presented at the <a href="https://sites.google.com/view/aiethicsworkshop">Workshop on Ethical, Social and Governance Issues in AI</a>
+        at NeurIPS '18
       </div>
-		</li>
+    </li>
     <li class="list-group-item">
-			<b>On Oracle-Efficient PAC Reinforcement Learning with Rich Observations</b><br>
-			Christoph Dann, Nan Jiang, Akshay Krishnamurthy, Alekh Agarwal, John Langford, Robert Schapire<br>
-			<a href="https://neurips.cc/Conferences/2018" class="badge bg-secondary">NeurIPS '18</a>
-		 	<mark>with spotlight talk</mark>
+      <b>On Oracle-Efficient PAC Reinforcement Learning with Rich Observations</b><br>
+      Christoph Dann, Nan Jiang, Akshay Krishnamurthy, Alekh Agarwal, John Langford, Robert Schapire<br>
+      <a href="https://neurips.cc/Conferences/2018" class="badge bg-secondary">NeurIPS '18</a>
+      <mark>with spotlight talk</mark>
       <a href="https://arxiv.org/abs/1803.00606">[Arxiv]</a><br>
-			<div class="p-2">
-				Previously presented at
-				<a href="https://www.nyas.org/events/2018/12th-annual-machine-learning-symposium/">12th Annual Machine Learning Symposium at NYAS</a>
-			</div>
+      <div class="p-2">
+        Previously presented at
+        <a href="https://www.nyas.org/events/2018/12th-annual-machine-learning-symposium/">12th Annual Machine Learning Symposium at NYAS</a>
+      </div>
     </li>
     <li class="list-group-item">
       <b>Decoupling Gradient-Like Learning Rules from Representations</b><br>
       Philip S. Thomas, Christoph Dann, Emma Brunskill<br>
-			<a href="https://icml.cc/Conferences/2018" class="badge bg-secondary">ICML '18</a>
-			<a href="https://arxiv.org/abs/1706.03100">[Arxiv]</a>
+      <a href="https://icml.cc/Conferences/2018" class="badge bg-secondary">ICML '18</a>
+      <a href="https://arxiv.org/abs/1706.03100">[Arxiv]</a>
     </li>
     <li class="list-group-item">
-			<b>Unifying PAC and Regret: Uniform PAC Bounds for Episodic Reinforcement Learning</b><br>
-			Christoph Dann, Tor Lattimore, Emma Brunskill<br>
-			<a href="https://neurips.cc/Conferences/2017" class="badge bg-secondary">NeurIPS '17</a>
-			<mark>with spotlight talk</mark>
-			<a href="http://papers.nips.cc/paper/7154-unifying-pac-and-regret-uniform-pac-bounds-for-episodic-reinforcement-learning">[pdf]</a>
+      <b>Unifying PAC and Regret: Uniform PAC Bounds for Episodic Reinforcement Learning</b><br>
+      Christoph Dann, Tor Lattimore, Emma Brunskill<br>
+      <a href="https://neurips.cc/Conferences/2017" class="badge bg-secondary">NeurIPS '17</a>
+      <mark>with spotlight talk</mark>
+      <a href="https://papers.nips.cc/paper/7154-unifying-pac-and-regret-uniform-pac-bounds-for-episodic-reinforcement-learning">[pdf]</a>
       <a href="https://arxiv.org/abs/1703.07710">[Arxiv]</a>
       <a href="https://github.com/chrodan/FiniteEpisodicRL.jl">[code]</a>
-			<div class="p-2">
-	      Previous version of this paper with stronger focus on linear state space dependency in PAC bound:<br>
-				<b>UBEV - A More Practical Algorithm for Episodic RL with Near-Optimal PAC and Regret Guarantees</b><br>
-				Christoph Dann, Tor Lattimore, Emma Brunskill, March 2017<br>
+      <div class="p-2">
+        Previous version of this paper with stronger focus on linear state space dependency in PAC bound:<br>
+        <b>UBEV - A More Practical Algorithm for Episodic RL with Near-Optimal PAC and Regret Guarantees</b><br>
+        Christoph Dann, Tor Lattimore, Emma Brunskill, March 2017<br>
         <a href="https://arxiv.org/abs/1703.07710v1">[Arxiv]</a>
-	    </div>
-    </li>
-    <li class="list-group-item">
-	    <b>Sample Efficient Policy Search for Optimal Stopping Domains</b><br>
-		 	Karan Goel, Christoph Dann, Emma Brunskill<br>
-			<a href="https://ijcai-17.org" class="badge bg-secondary">IJCAI '17</a>
-			<a href="https://arxiv.org/abs/1702.06238">[Arxiv]</a>
-	  </li>
-    <li class="list-group-item">
-			<b>Automated Matching of Pipeline Corrosion Features from In-line Inspection Data</b><br>
-      Markus Dann, Christoph Dann<br>
-      <a href="https://www.journals.elsevier.com/reliability-engineering-and-system-safety" class="badge bg-secondary">Reliability Engineering and System Safety '17'</a>
-      <a href="https://authors.elsevier.com/a/1UX2D3OQ~fHknd">[pdf]</a>
-		</li>
-		<li class="list-group-item">
-      <b>Memory Lens - How Much Memory Does an Agent Use?</b><br>
-			Christoph Dann, Katja Hofmann, Sebastian Nowozin<br>
-      <a href="https://ewrl.wordpress.com/ewrl13-2016" class="badge bg-secondary">EWRL' 16</a>
-			<a href="http://cdann.net/pub/DannMemoryLensEWRL2016.pdf">[pdf]</a>
-      <a href="http://arxiv.org/abs/1611.06928">[Arxiv]</a>
-			<div class="p-2">Also presented at the
-      	<a href="https://sites.google.com/site/nips2016interpretml">Interpretable ML for Complex Systems Workshop</a>  at NeurIPS '16
-			</div>
-		</li>
-		<li class="list-group-item">
-			<b>Energetic Natural Gradient Descent</b><br>
-      Philip S. Thomas, Bruno Castro da Silva, Christoph Dann, Emma Brunskill<br>
-      <a class="badge bg-secondary" href="http://icml.cc/2016/">ICML '16</a>
-      <a href="http://cdann.net/pub/Thomas2016b.pdf">[pdf]</a>
-		</li>
-    <li class="list-group-item">
-			<b>Bayesian Time-of-Flight for Realtime Shape, Illumination and Albedo</b><br>
-    	Amit Adam, Christoph Dann, Omer Yair, Shai Mazor, Sebastian Nowozin<br>
-			<a class="badge bg-secondary" href="http://ieeexplore.ieee.org/xpl/aboutJournal.jsp?punumber=34">PAMI '16</a>
-			<a href="pub/adam2016_tof.pdf">[pdf]</a>
-      <a href="pub/adam2016_tof_supp.pdf">[pdf supp]</a>
-      <a href="http://youtu.be/0fd04KkbBgU">[video]</a>
-      <a href="http://ieeexplore.ieee.org/xpl/articleDetails.jsp?arnumber=7469355">[publisher pdf]</a>
-      <a href="http://arxiv.org/abs/1507.06173">[Arxiv]</a>
-		</li>
-
-		<li class="list-group-item">
-			<b>Sample Complexity of Episodic Fixed-Horizon Reinforcement Learning</b><br>
-			Christoph Dann, Emma Brunskill<br>
-      <a class="badge bg-secondary" href="https://nips.cc/Conferences/2015">NeurIPS '15</a>
-			<a href="https://arxiv.org/pdf/1510.08906">[Arxiv]</a>
-		</li>
-		<li class="list-group-item">
-			<b>The Human Kernel</b><br>
-			Andrew Gordon Wilson, Christoph Dann, Christopher G. Lucas, Eric P. Xing<br>
-			<a class="badge bg-secondary" href="https://nips.cc/Conferences/2015">NeurIPS '15</a>
-      <a href="http://papers.nips.cc/paper/5765-the-human-kernel.pdf">[pdf]</a>
-      <a href="http://arxiv.org/abs/1510.07389">[Arxiv]</a>
-		</li>
-		<li class="list-group-item">
-			<b>Thoughts on Massively Scalable Gaussian Processes</b><br>
-      Andrew Gordon Wilson, Christoph Dann, Hannes Nickisch, 2015<br>
-      <a href="http://arxiv.org/abs/1511.01870">[Arix]</a>
-		</li>
-		<li class="list-group-item">
-			<b>RLPy: A Value-Function-Based Reinforcement Learning Framework for Education and Research</b><br>
-      Alborz Geramifard, Christoph Dann, Robert H. Klein, William Dabney, Jonathan P. How<br>
-      <a class="badge bg-secondary" href="http://jmlr.org/mloss/">JMLR MLOSS Track '15'</a>
-			<a href="http://jmlr.org/papers/volume16/geramifard15a/geramifard15a.pdf">[pdf]</a>
-			<a href="https://github.com/rlpy/rlpy">[code]</a>
-			<!--<br>
-			<div class="p-2">
-				Also presented at<br>
-            Machine Learning Open Source Software Workshop at NeurIPS '13<br>
-            2nd Multidisciplinary Conference on Reinforcement Learning and Decision Making (RLDM 2015)
-			</div>-->
-    </li>
-		<li class="list-group-item">
-			<b>Policy Evaluation with Temporal Differences: A Survey and Comparison</b><br>
-      Christoph Dann, Gerhard Neumann, Jan Peters<br>
-      <a class="badge bg-secondary" href="http://jmlr.org">JMLR '14</a>
-			<a href="http://jmlr.org/papers/volume15/dann14a/dann14a.pdf">[pdf]</a>
-      <a href="pub/dann14a-n-link-pendulum.pdf">[N-link pendulum linearization derivation]</a>
-			<a href="https://github.com/chrodan/tdlearn">[code]</a>
-			<br>
-			<div class="p-2">
-      	Also presented at ICAPS 2015 <a href="pub/icaps15_dann_abstract.pdf">[pdf]</a>
       </div>
     </li>
-		<li class="list-group-item">
-			<b>Off-Policy Learning Combined with Automatic Feature Expansion for Solving Large MDPs</b><br>
-			Alborz Geramifard, Christoph Dann, Jonathan P. How<br>
-			<a class="badge bg-secondary" href="http://rldm.org/">RLDM '13</a>
-			<a href="pub/rldm13geramifard.pdf">[pdf]</a>
-			<a href="pub/rldm13geramifard-poster.pdf">[poster]</a>
-		</li>
-		<li class="list-group-item">
-			<b>Pottics - The Potts Topic Model for Semantic Image Segmentation</b><br>
+    <li class="list-group-item">
+      <b>Sample Efficient Policy Search for Optimal Stopping Domains</b><br>
+      Karan Goel, Christoph Dann, Emma Brunskill<br>
+      <a href="https://ijcai-17.org" class="badge bg-secondary">IJCAI '17</a>
+      <a href="https://arxiv.org/abs/1702.06238">[Arxiv]</a>
+    </li>
+    <li class="list-group-item">
+      <b>Automated Matching of Pipeline Corrosion Features from In-line Inspection Data</b><br>
+      Markus Dann, Christoph Dann<br>
+      <a href="https://www.journals.elsevier.com/reliability-engineering-and-system-safety" class="badge bg-secondary">Reliability Engineering and System Safety '17</a>
+      <a href="https://authors.elsevier.com/a/1UX2D3OQ~fHknd">[pdf]</a>
+    </li>
+    <li class="list-group-item">
+      <b>Memory Lens - How Much Memory Does an Agent Use?</b><br>
+      Christoph Dann, Katja Hofmann, Sebastian Nowozin<br>
+      <a href="https://ewrl.wordpress.com/ewrl13-2016" class="badge bg-secondary">EWRL '16</a>
+      <a href="pub/DannMemoryLensEWRL2016.pdf">[pdf]</a>
+      <a href="https://arxiv.org/abs/1611.06928">[Arxiv]</a>
+      <div class="p-2">Also presented at the
+        <a href="https://sites.google.com/site/nips2016interpretml">Interpretable ML for Complex Systems Workshop</a> at NeurIPS '16
+      </div>
+    </li>
+    <li class="list-group-item">
+      <b>Energetic Natural Gradient Descent</b><br>
+      Philip S. Thomas, Bruno Castro da Silva, Christoph Dann, Emma Brunskill<br>
+      <a class="badge bg-secondary" href="https://icml.cc/2016/">ICML '16</a>
+      <a href="pub/Thomas2016b.pdf">[pdf]</a>
+    </li>
+    <li class="list-group-item">
+      <b>Bayesian Time-of-Flight for Realtime Shape, Illumination and Albedo</b><br>
+      Amit Adam, Christoph Dann, Omer Yair, Shai Mazor, Sebastian Nowozin<br>
+      <a class="badge bg-secondary" href="http://ieeexplore.ieee.org/xpl/aboutJournal.jsp?punumber=34">PAMI '16</a>
+      <a href="pub/adam2016_tof.pdf">[pdf]</a>
+      <a href="pub/adam2016_tof_supp.pdf">[pdf supp]</a>
+      <a href="https://youtu.be/0fd04KkbBgU">[video]</a>
+      <a href="http://ieeexplore.ieee.org/xpl/articleDetails.jsp?arnumber=7469355">[publisher pdf]</a>
+      <a href="https://arxiv.org/abs/1507.06173">[Arxiv]</a>
+    </li>
+    <li class="list-group-item">
+      <b>Sample Complexity of Episodic Fixed-Horizon Reinforcement Learning</b><br>
+      Christoph Dann, Emma Brunskill<br>
+      <a class="badge bg-secondary" href="https://nips.cc/Conferences/2015">NeurIPS '15</a>
+      <a href="https://arxiv.org/pdf/1510.08906">[Arxiv]</a>
+    </li>
+    <li class="list-group-item">
+      <b>The Human Kernel</b><br>
+      Andrew Gordon Wilson, Christoph Dann, Christopher G. Lucas, Eric P. Xing<br>
+      <a class="badge bg-secondary" href="https://nips.cc/Conferences/2015">NeurIPS '15</a>
+      <a href="https://papers.nips.cc/paper/5765-the-human-kernel.pdf">[pdf]</a>
+      <a href="https://arxiv.org/abs/1510.07389">[Arxiv]</a>
+    </li>
+    <li class="list-group-item">
+      <b>Thoughts on Massively Scalable Gaussian Processes</b><br>
+      Andrew Gordon Wilson, Christoph Dann, Hannes Nickisch, 2015<br>
+      <a href="https://arxiv.org/abs/1511.01870">[Arxiv]</a>
+    </li>
+    <li class="list-group-item">
+      <b>RLPy: A Value-Function-Based Reinforcement Learning Framework for Education and Research</b><br>
+      Alborz Geramifard, Christoph Dann, Robert H. Klein, William Dabney, Jonathan P. How<br>
+      <a class="badge bg-secondary" href="https://jmlr.org/mloss/">JMLR MLOSS Track '15</a>
+      <a href="https://jmlr.org/papers/volume16/geramifard15a/geramifard15a.pdf">[pdf]</a>
+      <a href="https://github.com/rlpy/rlpy">[code]</a>
+    </li>
+    <li class="list-group-item">
+      <b>Policy Evaluation with Temporal Differences: A Survey and Comparison</b><br>
+      Christoph Dann, Gerhard Neumann, Jan Peters<br>
+      <a class="badge bg-secondary" href="https://jmlr.org/">JMLR '14</a>
+      <a href="https://jmlr.org/papers/volume15/dann14a/dann14a.pdf">[pdf]</a>
+      <a href="pub/dann14a-n-link-pendulum.pdf">[N-link pendulum linearization derivation]</a>
+      <a href="https://github.com/chrodan/tdlearn">[code]</a>
+      <br>
+      <div class="p-2">
+        Also presented at ICAPS 2015 <a href="pub/icaps15_dann_abstract.pdf">[pdf]</a>
+      </div>
+    </li>
+    <li class="list-group-item">
+      <b>Off-Policy Learning Combined with Automatic Feature Expansion for Solving Large MDPs</b><br>
+      Alborz Geramifard, Christoph Dann, Jonathan P. How<br>
+      <a class="badge bg-secondary" href="https://rldm.org/">RLDM '13</a>
+      <a href="pub/rldm13geramifard.pdf">[pdf]</a>
+      <a href="pub/rldm13geramifard_poster.pdf">[poster]</a>
+    </li>
+    <li class="list-group-item">
+      <b>Pottics - The Potts Topic Model for Semantic Image Segmentation</b><br>
       Christoph Dann, Peter Gehler, Stefan Roth, Sebastian Nowozin<br>
-			<a class="badge bg-secondary" href="http://dagm2012.icg.tugraz.at/">DAGM '12</a>
-			<a href="pub/dann12pottics.pdf">[pdf]</a>
-      <a href="http://dx.doi.org/10.1007/978-3-642-32717-9_40">[publisher pdf]</a>
-			<a href="pub/dann12pottics-poster.pdf">[poster]</a>
-			<a href="https://github.com/chrodan/pottics">[code]</a>
-		</li>
-	</ul>
+      <a class="badge bg-secondary" href="http://dagm2012.icg.tugraz.at/">DAGM '12</a>
+      <a href="pub/dann12pottics.pdf">[pdf]</a>
+      <a href="https://doi.org/10.1007/978-3-642-32717-9_40">[publisher pdf]</a>
+      <a href="pub/dann12pottics-poster.pdf">[poster]</a>
+      <a href="https://github.com/chrodan/pottics">[code]</a>
+    </li>
+  </ul>
 </div>
 
-<div class="container">
-	<h1>Misc</h1>
+<div class="container p-2">
+  <h1>Misc</h1>
   <ul>
-		<li>Some conferences and journals (for example AAAI and JMLR) want
-    to have clean single-file tex-sources of your papers. A small
-    script of mine, <a href="https://github.com/chrodan/ptools">texclean.py</a> can
-    automatically clean-up and merge your tex-sources.</li>
+    <li>Some conferences and journals (for example AAAI and JMLR) want
+      to have clean single-file tex-sources of your papers. A small
+      script of mine, <a href="https://github.com/chrodan/ptools">texclean.py</a> can
+      automatically clean-up and merge your tex-sources.</li>
   </ul>
 </div>
 </body>
